@@ -1,0 +1,269 @@
+/* ECLECTICA 2K26 II - Cyber-Luxe Theme Stylesheet */
+:root {
+  --navy-deep: #050b18;
+  --navy-card: rgba(10, 22, 44, 0.82);
+  --navy-card-hover: rgba(14, 30, 60, 0.95);
+  --gold-glow: #f5b700;
+  --gold-metallic: #d4af37;
+  --cyan-neon: #00f0ff;
+  --cyan-soft: #0099ff;
+  --text-primary: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-subtle: rgba(212, 175, 55, 0.2);
+  --border-cyan: rgba(0, 240, 255, 0.35);
+  --font-heading: 'Rajdhani', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+}
+
+body {
+  background-color: var(--navy-deep);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(0, 240, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 60%, rgba(245, 183, 0, 0.07) 0%, transparent 40%),
+    linear-gradient(to bottom, #050b18, #071224);
+  background-attachment: fixed;
+}
+
+/* Typography */
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: 0.03em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #050b18;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #00f0ff, #f5b700);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f5b700;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Glassmorphic Cyber Cards */
+.cyber-card {
+  background: var(--navy-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyan-neon), var(--gold-glow), transparent);
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.cyber-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-cyan);
+  box-shadow: 0 16px 36px -10px rgba(0, 240, 255, 0.18), 0 0 20px rgba(245, 183, 0, 0.1);
+}
+
+.cyber-card:hover::before {
+  opacity: 1;
+}
+
+/* Metallic Gold Gradients */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fff2a3 0%, #f5b700 50%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cyan-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #00f0ff 60%, #0088ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow Badges */
+.badge-gold {
+  background: rgba(245, 183, 0, 0.12);
+  border: 1px solid rgba(245, 183, 0, 0.4);
+  color: #fce18b;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.badge-cyan {
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  color: #7df6ff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Buttons */
+.btn-gold {
+  background: linear-gradient(135deg, #ffd700 0%, #f5b700 50%, #d4af37 100%);
+  color: #050b18;
+  font-weight: 700;
+  padding: 0.75rem 1.6rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 18px rgba(245, 183, 0, 0.35);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  letter-spacing: 0.04em;
+  font-size: 1.05rem;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(245, 183, 0, 0.55);
+  filter: brightness(1.08);
+}
+
+.btn-outline-cyan {
+  background: rgba(0, 240, 255, 0.05);
+  color: #00f0ff;
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  letter-spacing: 0.03em;
+  font-size: 0.98rem;
+}
+
+.btn-outline-cyan:hover {
+  background: rgba(0, 240, 255, 0.15);
+  border-color: #00f0ff;
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.35);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.35), 0 0 45px rgba(245, 183, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 240, 255, 0.6), 0 0 65px rgba(245, 183, 0, 0.4);
+  }
+}
+
+.glow-avatar {
+  animation: pulseGlow 4s infinite ease-in-out;
+}
+
+/* Grid layout for responsive events */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+@media (max-width: 640px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Modal Backdrop */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 8, 18, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1.25rem;
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: #091326;
+  border: 1px solid var(--border-cyan);
+  border-radius: 20px;
+  max-width: 780px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px -15px rgba(0, 240, 255, 0.3), 0 0 35px rgba(245, 183, 0, 0.15);
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.94); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

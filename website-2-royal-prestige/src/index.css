@@ -1,0 +1,277 @@
+/* ECLECTICA 2K26 II - Royal Academic & Platinum Gold Theme Stylesheet */
+:root {
+  --bg-page: #f8fafc;
+  --bg-white: #ffffff;
+  --bg-navy-dark: #07162c;
+  --navy-imperial: #0b2545;
+  --navy-soft: #13315c;
+  --gold-primary: #b8860b;
+  --gold-metallic: #c59b27;
+  --gold-light: #dfb15b;
+  --gold-pale: #fffbeb;
+  --text-dark: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --border-gold: rgba(197, 155, 39, 0.35);
+  --border-light: rgba(226, 232, 240, 0.9);
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-dark);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 10% 15%, rgba(197, 155, 39, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 90% 40%, rgba(11, 37, 69, 0.05) 0%, transparent 40%),
+    linear-gradient(to bottom, #ffffff, #f8fafc);
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+  letter-spacing: 0.02em;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #c59b27;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #966f07;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Royal Prestige Card */
+.royal-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px -2px rgba(11, 37, 69, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.royal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #b8860b, #dfb15b, #c59b27);
+  opacity: 0.8;
+  transition: height 0.3s ease;
+}
+
+.royal-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-gold);
+  box-shadow: 0 18px 38px -10px rgba(197, 155, 39, 0.22), 0 4px 12px rgba(11, 37, 69, 0.06);
+}
+
+.royal-card:hover::before {
+  height: 4px;
+}
+
+/* Badges */
+.badge-royal-gold {
+  background: #fffbeb;
+  border: 1px solid rgba(197, 155, 39, 0.4);
+  color: #92400e;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.badge-royal-navy {
+  background: #eff6ff;
+  border: 1px solid rgba(11, 37, 69, 0.2);
+  color: #0b2545;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Royal Buttons */
+.btn-royal-primary {
+  background: linear-gradient(135deg, #0b2545 0%, #07162c 100%);
+  color: #fce18b;
+  border: 1px solid rgba(223, 177, 91, 0.4);
+  font-weight: 700;
+  padding: 0.75rem 1.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(11, 37, 69, 0.25);
+  text-decoration: none;
+  font-family: var(--font-serif);
+  letter-spacing: 0.04em;
+  font-size: 1rem;
+}
+
+.btn-royal-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #13315c 0%, #0b2545 100%);
+  border-color: #dfb15b;
+  box-shadow: 0 8px 24px rgba(11, 37, 69, 0.35);
+  color: #ffffff;
+}
+
+.btn-royal-gold {
+  background: linear-gradient(135deg, #dfb15b 0%, #c59b27 50%, #b8860b 100%);
+  color: #07162c;
+  font-weight: 800;
+  padding: 0.75rem 1.6rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 18px rgba(197, 155, 39, 0.35);
+  text-decoration: none;
+  font-family: var(--font-serif);
+  letter-spacing: 0.04em;
+  font-size: 1rem;
+}
+
+.btn-royal-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 26px rgba(197, 155, 39, 0.5);
+  filter: brightness(1.05);
+}
+
+.btn-outline-royal {
+  background: #ffffff;
+  color: #0b2545;
+  border: 1.5px solid #0b2545;
+  font-weight: 700;
+  padding: 0.65rem 1.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-family: var(--font-serif);
+  letter-spacing: 0.03em;
+  font-size: 0.95rem;
+}
+
+.btn-outline-royal:hover {
+  background: #0b2545;
+  color: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(11, 37, 69, 0.2);
+}
+
+/* Gold Gradient Text */
+.gold-text-prestige {
+  background: linear-gradient(135deg, #92400e 0%, #b8860b 40%, #c59b27 70%, #966f07 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navy-text-prestige {
+  color: #0b2545;
+}
+
+/* Events Grid */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+@media (max-width: 640px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 22, 44, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1.25rem;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.modal-content {
+  background: #ffffff;
+  border: 2px solid var(--border-gold);
+  border-radius: 20px;
+  max-width: 780px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px -15px rgba(11, 37, 69, 0.3), 0 0 35px rgba(197, 155, 39, 0.2);
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

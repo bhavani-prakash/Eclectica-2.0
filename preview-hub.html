@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECLECTICA 2K26 II | Theme Selection & Deployment Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #040814;
+      color: #f8fafc;
+      min-height: 100vh;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header { text-align: center; margin-bottom: 3rem; }
+    .logo-badge {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid #d4af37;
+      box-shadow: 0 0 30px rgba(0, 240, 255, 0.4);
+      margin: 0 auto 1.5rem auto;
+      display: block;
+    }
+    h1 { font-family: 'Rajdhani', sans-serif; font-size: 3rem; font-weight: 800; color: #ffffff; }
+    .gold-text {
+      background: linear-gradient(135deg, #ffd700, #f5b700, #d4af37);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .cyan-text { color: #00f0ff; }
+    .sub { color: #94a3b8; font-size: 1.1rem; max-width: 700px; margin: 0.5rem auto 0 auto; }
+    .themes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; margin-bottom: 3.5rem; }
+    .theme-card {
+      background: #091326;
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .theme-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    }
+    .theme-1 { border-top: 4px solid #00f0ff; }
+    .theme-2 { border-top: 4px solid #b8860b; background: #0c1a30; }
+    .theme-3 { border-top: 4px solid #f5b700; }
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+    .badge-1 { background: rgba(0, 240, 255, 0.15); color: #00f0ff; border: 1px solid #00f0ff44; }
+    .badge-2 { background: rgba(184, 134, 11, 0.2); color: #ffd700; border: 1px solid #b8860b66; }
+    .badge-3 { background: rgba(245, 183, 0, 0.15); color: #f5b700; border: 1px solid #f5b70044; }
+    .card-title { font-size: 1.6rem; margin-bottom: 0.5rem; font-family: 'Rajdhani', sans-serif; font-weight: 700; }
+    .card-desc { color: #94a3b8; font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
+    .palette { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+    .color-swatch { width: 28px; height: 28px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); }
+    .cmd-box {
+      background: #040814;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: #00f0ff;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .btn {
+      display: block;
+      text-align: center;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-1 { background: linear-gradient(135deg, #00f0ff, #0088ff); color: #050b18; }
+    .btn-2 { background: linear-gradient(135deg, #ffd700, #b8860b); color: #050b18; }
+    .btn-3 { background: linear-gradient(135deg, #ffd700, #f5b700); color: #050b18; }
+    .guide-box {
+      background: #091326;
+      border-radius: 16px;
+      padding: 2.5rem;
+      border: 1px solid rgba(0, 240, 255, 0.2);
+    }
+    .guide-title { font-size: 1.8rem; margin-bottom: 1.5rem; font-family: 'Rajdhani', sans-serif; color: #ffd700; }
+    .step-list { list-style: none; display: flex; flexDirection: column; gap: 1rem; }
+    .step-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #00f0ff;
+      color: #040814;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="assets/eclectica-logo.jpg" alt="ECLECTICA Logo" class="logo-badge" />
+      <h1>ECLECTICA <span class="gold-text">2K26 II</span></h1>
+      <p class="cyan-text" style="font-weight: 700; letter-spacing: 0.15em;">EXPLORE • CREATE • INNOVATE</p>
+      <p class="sub">
+        MITS Deemed to be University • Department of Electronics & Communication Engineering.
+        Choose from 3 distinct, fully-responsive React websites built to reflect your official crest logo.
+      </p>
+    </div>
+
+    <div class="themes-grid">
+      <!-- Website 1 -->
+      <div class="theme-card theme-1">
+        <span class="badge badge-1">Option 1 • Folder: website-1-cyber-luxe</span>
+        <h2 class="card-title" style="color: #00f0ff;">Cyber-Luxe & Circuit Tech</h2>
+        <p class="card-desc">
+          Deep space navy background with metallic gold borders, glassmorphic glow cards, electric cyan pulse badges, and live countdown timer.
+        </p>
+        <div class="palette">
+          <div class="color-swatch" style="background: #050b18;" title="Navy Deep"></div>
+          <div class="color-swatch" style="background: #00f0ff;" title="Cyber Cyan"></div>
+          <div class="color-swatch" style="background: #f5b700;" title="Gold Glow"></div>
+          <div class="color-swatch" style="background: #0a162c;" title="Card Navy"></div>
+        </div>
+        <div class="cmd-box">
+          cd website-1-cyber-luxe<br>npm run dev
+        </div>
+        <a href="http://localhost:5173" target="_blank" class="btn btn-1">Preview Port :5173</a>
+      </div>
+
+      <!-- Website 2 -->
+      <div class="theme-card theme-2">
+        <span class="badge badge-2">Option 2 • Folder: website-2-royal-prestige</span>
+        <h2 class="card-title" style="color: #ffd700;">Royal Academic & Platinum Gold</h2>
+        <p class="card-desc">
+          Mirrors the pristine white center and metallic gold laurel crest of the official badge. Regal serif typography, clean cards, and university prestige.
+        </p>
+        <div class="palette">
+          <div class="color-swatch" style="background: #f8fafc;" title="Platinum White"></div>
+          <div class="color-swatch" style="background: #0b2545;" title="Imperial Navy"></div>
+          <div class="color-swatch" style="background: #b8860b;" title="Burnished Gold"></div>
+          <div class="color-swatch" style="background: #ffffff;" title="Card White"></div>
+        </div>
+        <div class="cmd-box">
+          cd website-2-royal-prestige<br>npm run dev
+        </div>
+        <a href="http://localhost:5174" target="_blank" class="btn btn-2">Preview Port :5174</a>
+      </div>
+
+      <!-- Website 3 -->
+      <div class="theme-card theme-3">
+        <span class="badge badge-3">Option 3 • Folder: website-3-neon-matrix</span>
+        <h2 class="card-title" style="color: #ffd700;">Cyber-Luxe Circuit & Oscilloscope</h2>
+        <p class="card-desc">
+          Combines Website 1's deep navy & metallic gold palette with animated PCB copper traces, floating ECE schematic symbols (Resistors, Capacitors, Inductors, Op-Amps, Antennas), and an interactive real-time oscilloscope monitor.
+        </p>
+        <div class="palette">
+          <div class="color-swatch" style="background: #050b18;" title="Navy Deep"></div>
+          <div class="color-swatch" style="background: #00f0ff;" title="Electric Cyan"></div>
+          <div class="color-swatch" style="background: #f5b700;" title="Metallic Gold"></div>
+          <div class="color-swatch" style="background: #ffd700;" title="Bright Gold"></div>
+        </div>
+        <div class="cmd-box">
+          cd website-3-neon-matrix<br>npm run dev
+        </div>
+        <a href="http://localhost:5175" target="_blank" class="btn btn-3">Preview Port :5175</a>
+      </div>
+    </div>
+
+    <!-- Instructions Guide -->
+    <div class="guide-box">
+      <h3 class="guide-title">Dedicated Form Links & Vercel Deployment</h3>
+      <div class="step-list" style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div>
+            <strong>How to edit your Google Form links in the code:</strong>
+            <p style="color: #cbd5e1; margin-top: 0.25rem;">
+              Open <code>website-3-neon-matrix/src/data/eventsData.js</code> (lines 7–16).
+              <br>Each event has its own link:
+              <br><code style="color: #00f0ff;">"tech-quiz": "https://docs.google.com/forms/d/e/.../viewform",</code>
+              <br><code style="color: #ffd700;">"layotrix": "https://docs.google.com/forms/d/e/.../viewform",</code>
+              <br>Simply paste your real Google Form URL for each event.
+            </p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div>
+            <strong>Deploying to Vercel:</strong>
+            <p style="color: #cbd5e1; margin-top: 0.25rem;">
+              Each folder already contains a pre-configured <code>vercel.json</code>.
+              <br>• <strong>Method A (CLI):</strong> <code>cd website-3-neon-matrix</code> and run <code>vercel</code>.
+              <br>• <strong>Method B (GitHub & Vercel Dashboard):</strong> Push the repository to GitHub, go to <a href="https://vercel.com/new" target="_blank" style="color: #ffd700;">vercel.com/new</a>, import the repo, and set the <strong>Root Directory</strong> to <code>website-3-neon-matrix</code> (or whichever theme you choose).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

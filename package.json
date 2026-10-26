@@ -1,0 +1,15 @@
+{
+  "name": "ece-eclectica-2k26-ii-symposium",
+  "version": "2.0.0",
+  "private": true,
+  "description": "3 Distinct React Themes for ECLECTICA 2K26 II - Department of ECE, MITS Deemed to be University",
+  "scripts": {
+    "dev:1": "npm --prefix website-1-cyber-luxe run dev",
+    "dev:2": "npm --prefix website-2-royal-prestige run dev",
+    "dev:3": "npm --prefix website-3-neon-matrix run dev",
+    "build:1": "npm --prefix website-1-cyber-luxe run build",
+    "build:2": "npm --prefix website-2-royal-prestige run build",
+    "build:3": "npm --prefix website-3-neon-matrix run build",
+    "build:all": "npm run build:1 && npm run build:2 && npm run build:3"
+  }
+}
