@@ -4,14 +4,15 @@
 // Paste your actual Google Form link for each specific event below:
 // ============================================================================
 export const EVENT_FORM_LINKS = {
-  "tech-quiz": "https://docs.google.com/forms/d/e/PASTE_YOUR_TECH_QUIZ_GOOGLE_FORM_LINK_HERE/viewform",
-  "layotrix": "https://docs.google.com/forms/d/e/PASTE_YOUR_LAYOTRIX_PCB_GOOGLE_FORM_LINK_HERE/viewform",
+  "ideavya": "https://forms.gle/dtXUEeyFknHhxSQe7",
+  "tech-quiz": "https://docs.google.com/forms/d/e/1FAIpQLSeFOkbr8Io4Cei_AIEPzZXq3ji3mlIrILjTvJ-0SSNigfcfoQ/viewform?usp=publish-editor",
+  "layotrix": "https://docs.google.com/forms/d/e/1FAIpQLSdwzDJ_ghOrKp9--lIHzfts4OtbDiNkRQbIxArDjaavdwvSuA/viewform?usp=dialog",
   "project-expo": "https://docs.google.com/forms/d/e/PASTE_YOUR_PROJECT_EXPO_GOOGLE_FORM_LINK_HERE/viewform",
-  "nexcircuit": "https://docs.google.com/forms/d/e/PASTE_YOUR_NEXCIRCUIT_GOOGLE_FORM_LINK_HERE/viewform",
+  "nexcircuit": "https://docs.google.com/forms/d/e/1FAIpQLSfHr8ZZ2eg1qvFfHPMeVWbF3KF2AyHV_J5bwW7b4ZGpjFnNmQ/viewform?usp=publish-editor",
   "pi-storm": "https://docs.google.com/forms/d/e/PASTE_YOUR_PI_STORM_GOOGLE_FORM_LINK_HERE/viewform",
   "bug-hunters": "https://docs.google.com/forms/d/e/PASTE_YOUR_BUG_HUNTERS_GOOGLE_FORM_LINK_HERE/viewform",
   "poster-presentation": "https://docs.google.com/forms/d/e/PASTE_YOUR_POSTER_PRESENTATION_GOOGLE_FORM_LINK_HERE/viewform",
-  "debate": "https://docs.google.com/forms/d/e/PASTE_YOUR_DEBATE_GOOGLE_FORM_LINK_HERE/viewform",
+  "debate": "https://docs.google.com/forms/d/e/1FAIpQLScV5Pe7lyzIQfbV2YxiTBHZdqbI1eixDnQBxdS1pEnofUHsYQ/viewform?usp=header",
 };
 
 export const FEST_INFO = {
@@ -28,6 +29,68 @@ export const FEST_INFO = {
 };
 
 export const EVENTS = [
+  {
+    id: "ideavya",
+    title: "IDEAVYA 2026",
+    subtitle: "Your Idea · Your Innovation",
+    category: "Innovation",
+    badge: "Ideathon",
+    eceSymbol: "💡 [IDEA/INNOV]",
+    schematicType: "Innovation & Entrepreneurship",
+    tagline: "Identify real-world challenges and build original, feasible solutions — then pitch to win ₹12,500 in prizes!",
+    teamSize: "2 - 4 Members",
+    roundsCount: 4,
+    icon: "Lightbulb",
+    formUrl: EVENT_FORM_LINKS["ideavya"],
+    overview: "IDEAVYA 2026 is a student-driven innovation competition organised by MITS in collaboration with PathVision Innovations Pvt. Ltd. Unlike conventional competitions with predefined problem statements, Ideathon empowers students to independently identify problems, explore existing solutions, and propose innovative approaches with meaningful societal, technological, or industrial impact. The event features a total cash prize pool of ₹12,500 and an Innovation Bootcamp & Idea Showcase.",
+    rounds: [
+      {
+        roundNumber: "Level 1",
+        title: "Idea Submission",
+        description: "Participants submit their original ideas outlining the problem identified, proposed solution, degree of innovation, practical feasibility, and expected societal / technological / industrial impact. All teams begin here.",
+        duration: "Online Submission Phase",
+        scoring: "Quality, originality, and potential of proposed ideas"
+      },
+      {
+        roundNumber: "Level 2",
+        title: "Top 20 Teams Shortlisted",
+        description: "Twenty teams are shortlisted based on evaluation of submitted ideas. Shortlisted teams are notified and advance to the Semi-Finale pitching stage held at the MITS Campus.",
+        duration: "Evaluation & Notification Phase",
+        scoring: "Idea quality, real-world relevance, and innovation depth"
+      },
+      {
+        roundNumber: "Level 3 – Semi-Finale",
+        title: "Closed-Room Pitching (Top 12 Teams)",
+        description: "Twelve teams present their innovations in a closed-room pitching session before an expert evaluation panel. Teams should clearly articulate the problem, solution, and potential impact through structured presentations.",
+        duration: "10 Min Pitch + 5 Min Q&A per team",
+        scoring: "Innovation depth, feasibility, presentation clarity, and expert panel assessment"
+      },
+      {
+        roundNumber: "Level 4 – Grand Finale",
+        title: "On-Stage Grand Finale (Top 6 Teams)",
+        description: "Six finalist teams compete through on-stage presentations before judges and a live audience. Teams defend their ideas, demonstrate any models or prototypes at exhibition stalls, and compete for the Best Audience-Loved Idea award through live audience polling.",
+        duration: "15 Min On-Stage + Audience Poll",
+        scoring: "Judge scores + live audience polling for Best Audience-Loved Idea award"
+      }
+    ],
+    rules: [
+      "Team size: 2 to 4 members (multidisciplinary teams encouraged).",
+      "Ideas must be original — plagiarism or recycled prior submissions will lead to disqualification.",
+      "Problem identification and solution must be independently developed by the team.",
+      "Models, prototypes, or concept demonstrations are welcomed but not mandatory.",
+      "The event also features an Innovation Bootcamp & Idea Showcase open to all participating teams.",
+      "Audience polling determines the 'Best Audience-Loved Idea' prize (₹2,500) independently.",
+      "Decision of the expert evaluation panel is final in all judging matters."
+    ],
+    perks: [
+      "🥇 First Prize: ₹6,000",
+      "🥈 Second Prize: ₹4,000",
+      "🏆 Best Audience-Loved Idea: ₹2,500 (via live audience poll)",
+      "Innovation Bootcamp & Idea Showcase participation",
+      "Certificates for all participants",
+      "Mentorship & entrepreneurial development opportunities"
+    ]
+  },
   {
     id: "tech-quiz",
     title: "TECH QUIZ",
