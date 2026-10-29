@@ -24,8 +24,8 @@ export const FEST_INFO = {
   tagline: "Unleashing Engineering Brilliance in Electronics & Communication",
   date: "NOVEMBER 11 & 12, 2026",
   venue: "ECE Department Seminar Hall & Advanced Laboratories, MITS Campus",
-  contactEmail: "eclectica2k26@mits.ac.in",
-  contactPhone: "+91 98765 43210 / +91 91234 56789",
+  contactEmail: "bhavaniprakash960@gmail.com",
+  contactPhone: "+91 79815 76818 / +91 8125035960",
 };
 
 export const EVENTS = [

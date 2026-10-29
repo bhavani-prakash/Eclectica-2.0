@@ -33,7 +33,7 @@ export default function Navbar() {
           <a href="#events" style={{ color: '#cbd5e1', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', transition: 'color 0.2s' }}
              onMouseEnter={(e) => e.target.style.color = '#00f0ff'}
              onMouseLeave={(e) => e.target.style.color = '#cbd5e1'}>
-            Events (8)
+            Events (9)
           </a>
           <a href="#about" style={{ color: '#cbd5e1', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', transition: 'color 0.2s' }}
              onMouseEnter={(e) => e.target.style.color = '#00f0ff'}

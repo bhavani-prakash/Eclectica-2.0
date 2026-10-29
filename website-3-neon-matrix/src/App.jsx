@@ -32,7 +32,7 @@ export default function App() {
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.65rem' }}>
               <span className="badge-cyan">
-                <Sparkles size={14} /> 8 SPECIALIZED ARENAS
+                <Sparkles size={14} /> 9 SPECIALIZED ARENAS
               </span>
               <span className="badge-gold">
                 <Trophy size={14} /> SEPARATE GOOGLE FORM PER EVENT

@@ -60,7 +60,7 @@ export default function Footer() {
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.65rem', padding: 0 }}>
               <li><a href="#hero" style={{ color: '#cbd5e1', textDecoration: 'none', fontSize: '0.92rem', transition: 'color 0.2s' }}>Back to Top</a></li>
-              <li><a href="#events" style={{ color: '#cbd5e1', textDecoration: 'none', fontSize: '0.92rem', transition: 'color 0.2s' }}>All 8 Flagship Events</a></li>
+              <li><a href="#events" style={{ color: '#cbd5e1', textDecoration: 'none', fontSize: '0.92rem', transition: 'color 0.2s' }}>All  Flagship Events</a></li>
               <li><a href="#about" style={{ color: '#cbd5e1', textDecoration: 'none', fontSize: '0.92rem', transition: 'color 0.2s' }}>About ECE Department</a></li>
               <li><a href="#rules" style={{ color: '#cbd5e1', textDecoration: 'none', fontSize: '0.92rem', transition: 'color 0.2s' }}>Rules & Perks</a></li>
             </ul>

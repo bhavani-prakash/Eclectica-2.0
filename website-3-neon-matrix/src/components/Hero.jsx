@@ -89,8 +89,7 @@ export default function Hero() {
           color: '#cbd5e1',
           lineHeight: 1.65
         }}>
-          South India's premier National Level Technical Symposium organized by the Department of Electronics & Communication Engineering.
-          Choose your arena below to explore rules and submit your entry on that event's dedicated Google Form.
+          A two Days National Level Technical Symposium organized by the Department of Electronics & Communication Engineering.
         </p>
 
         {/* Quick Symposium Meta Pills */}
@@ -148,7 +147,7 @@ export default function Hero() {
         {/* CTA: Button leads to Events */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '2.5rem' }}>
           <a href="#events" className="btn-gold" style={{ padding: '0.85rem 2.5rem', fontSize: '1.15rem' }}>
-            <span>Explore 8 Events & Register</span>
+            <span>Explore 9 Events & Register</span>
             <ArrowRight size={18} />
           </a>
         </div>

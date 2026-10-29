@@ -110,7 +110,7 @@ export default function AboutSection() {
                 className="btn-gold" 
                 style={{ width: '100%', justifyContent: 'center' }}
               >
-                <span>Browse 8 Events & Register</span>
+                <span>Browse Events & Register</span>
                 <ArrowRight size={16} />
               </a>
             </div>

@@ -35,12 +35,7 @@ export default function EventCard({ event, onExplore }) {
         </div>
         
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.3rem' }}>
-          <span className="badge-gold">
-            {event.eceSymbol}
-          </span>
-          <span style={{ fontSize: '0.7rem', color: '#00f0ff', fontWeight: 600 }}>
-            {event.schematicType}
-          </span>
+          
         </div>
       </div>
 
