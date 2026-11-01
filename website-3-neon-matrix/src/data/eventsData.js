@@ -9,7 +9,6 @@ export const EVENT_FORM_LINKS = {
   "layotrix": "https://docs.google.com/forms/d/e/1FAIpQLSdwzDJ_ghOrKp9--lIHzfts4OtbDiNkRQbIxArDjaavdwvSuA/viewform?usp=dialog",
   "project-expo": "https://docs.google.com/forms/d/e/PASTE_YOUR_PROJECT_EXPO_GOOGLE_FORM_LINK_HERE/viewform",
   "nexcircuit": "https://docs.google.com/forms/d/e/1FAIpQLSfHr8ZZ2eg1qvFfHPMeVWbF3KF2AyHV_J5bwW7b4ZGpjFnNmQ/viewform?usp=publish-editor",
-  "pi-storm": "https://docs.google.com/forms/d/e/PASTE_YOUR_PI_STORM_GOOGLE_FORM_LINK_HERE/viewform",
   "bug-hunters": "https://docs.google.com/forms/d/e/PASTE_YOUR_BUG_HUNTERS_GOOGLE_FORM_LINK_HERE/viewform",
   "poster-presentation": "https://docs.google.com/forms/d/e/PASTE_YOUR_POSTER_PRESENTATION_GOOGLE_FORM_LINK_HERE/viewform",
   "debate": "https://docs.google.com/forms/d/e/1FAIpQLScV5Pe7lyzIQfbV2YxiTBHZdqbI1eixDnQBxdS1pEnofUHsYQ/viewform?usp=header",
@@ -260,38 +259,6 @@ export const EVENTS = [
       "Ties resolved based on completion time in Round 4."
     ],
     perks: ["Circuit Wizard Winner Shield", "Cash Prize & Merit Certificate", "Kit Giveaways"]
-  },
-  {
-    id: "pi-storm",
-    title: "PI-STORM",
-    subtitle: "Raspberry Pi Rapid Prototyping Hack",
-    category: "Embedded Systems",
-    badge: "SBC Hackathon",
-    eceSymbol: "𝝅 [GPIO & ARM]",
-    schematicType: "Raspberry Pi & Python",
-    tagline: "Tackle a surprise problem statement using Raspberry Pi, build a prototype, and pitch your solution!",
-    teamSize: "2 - 3 Members",
-    roundsCount: 1,
-    icon: "Terminal",
-    formUrl: EVENT_FORM_LINKS["pi-storm"],
-    overview: "PI-STORM is a high-intensity embedded challenge. An unrevealed real-world problem statement will be given on the spot. Teams prototype a working solution utilizing Raspberry Pi.",
-    rounds: [
-      {
-        roundNumber: "Single Stage Hack",
-        title: "Rapid Prototyping & Pitch",
-        description: "Teams receive the problem statement at the start of the session. They have 2.5 hours to code (Python/C), interface GPIOs, configure sensors/displays, and pitch their working solution.",
-        duration: "2.5 Hours",
-        scoring: "Problem-solving ingenuity (30%), GPIO & hardware interfacing (30%), Code structure (20%), Viva & demo (20%)"
-      }
-    ],
-    rules: [
-      "Team of 2 to 3 members.",
-      "Participants are encouraged to bring their Raspberry Pi board (Pi 3 / 4 / 5 or Zero), micro-SD card with OS, and preferred sensors. Limited lab boards available on prior request.",
-      "Use of open-source Python libraries (RPi.GPIO, gpiozero, OpenCV, Flask, etc.) is permitted.",
-      "Both hardware connection and software execution must be demonstrated live to the judges.",
-      "Judges' decision regarding prototype grading will be absolute."
-    ],
-    perks: ["Best Hacker Cash Prize", "Certificate of Technical Excellence", "Exclusive Raspberry Pi Swag"]
   },
   {
     id: "bug-hunters",
