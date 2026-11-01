@@ -2,28 +2,37 @@ import React, { useState, useEffect } from 'react';
 import { Calendar, MapPin, Trophy, ArrowRight, Zap } from 'lucide-react';
 import { FEST_INFO } from '../data/eventsData';
 
+// Target: November 11, 2026 09:00 AM IST (UTC+5:30)
+const TARGET_DATE = new Date('2026-11-11T09:00:00+05:30');
+
+function getTimeLeft() {
+  const diff = TARGET_DATE - Date.now();
+  if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  const totalSeconds = Math.floor(diff / 1000);
+  return {
+    days:    Math.floor(totalSeconds / 86400),
+    hours:   Math.floor((totalSeconds % 86400) / 3600),
+    minutes: Math.floor((totalSeconds % 3600) / 60),
+    seconds: totalSeconds % 60,
+  };
+}
+
 export default function Hero() {
-  const [timeLeft, setTimeLeft] = useState({ days: 16, hours: 10, minutes: 45, seconds: 20 });
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev.seconds > 0) return { ...prev, seconds: prev.seconds - 1 };
-        if (prev.minutes > 0) return { ...prev, minutes: 59, seconds: 59 };
-        if (prev.hours > 0) return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        if (prev.days > 0) return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
-        return prev;
-      });
+      setTimeLeft(getTimeLeft());
     }, 1000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section id="hero" style={{ padding: '3.5rem 0 3rem 0', position: 'relative', zIndex: 1 }}>
+    <section id="hero" style={{ padding: '1.2rem 0 3rem 0', position: 'relative', zIndex: 1 }}>
       <div className="container" style={{ textAlign: 'center' }}>
         
         {/* Top Department Badges */}
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.25rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
           <span className="badge-cyan">
             <Zap size={14} /> MITS DEEMED TO BE UNIVERSITY
           </span>
@@ -32,35 +41,70 @@ export default function Hero() {
           </span>
         </div>
 
-        {/* Center Logo with Cyber-Luxe Ring */}
-        <div style={{ margin: '0 auto 1.25rem auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        {/* ── Logo + Title overlay block ─────────────────── */}
+        <div
+          className="hero-overlay-block"
+          style={{
+            position: 'relative',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            minHeight: '200px',
+            marginBottom: '0.6rem',
+          }}
+        >
+
+          {/* Crest Logo — stays at its natural position */}
           <div style={{
             position: 'relative',
             padding: '8px',
             borderRadius: '50%',
             background: 'linear-gradient(135deg, #00f0ff 0%, #d4af37 50%, #f5b700 100%)',
-            boxShadow: '0 0 35px rgba(0, 240, 255, 0.35), 0 0 50px rgba(245, 183, 0, 0.2)'
+            boxShadow: '0 0 35px rgba(0, 240, 255, 0.35), 0 0 50px rgba(245, 183, 0, 0.2)',
+            marginTop: '24px',
           }}>
-            <img 
-              src="/eclectica-logo.jpg" 
-              alt="ECLECTICA 2K26 II Official Logo" 
+            <img
+              src="/eclectica-logo.jpg"
+              alt="ECLECTICA 2K26 II Official Logo"
               style={{
                 width: '160px',
                 height: '160px',
                 borderRadius: '50%',
                 objectFit: 'cover',
                 display: 'block',
-                border: '3px solid #050b18'
+                border: '3px solid #050b18',
               }}
             />
           </div>
-        </div>
 
-        {/* Main Festival Title */}
-        <h1 className="font-heading" style={{ fontSize: 'clamp(2.5rem, 6.5vw, 4.6rem)', fontWeight: 900, lineHeight: 1.05, marginBottom: '0.5rem' }}>
-          <span className="cyan-gradient-text">ECLECTICA </span>
-          <span className="gold-gradient-text">2K26 II</span>
-        </h1>
+          {/* Title PNG — absolute, floats over the logo */}
+          <div
+            className="hero-title-img-wrap"
+            style={{
+              position: 'absolute',
+              top: '60%',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: '100%',
+              zIndex: 2,
+              pointerEvents: 'none',
+            }}
+          >
+            <img
+              src="/eclectica-title.png"
+              alt="ECLECTICA-2K26 II"
+              style={{
+                maxWidth: 'clamp(280px, 72vw, 700px)',
+                width: '100%',
+                height: 'auto',
+                display: 'block',
+                margin: '0 auto',
+                filter: 'drop-shadow(0 0 22px rgba(245, 183, 0, 0.6)) drop-shadow(0 0 50px rgba(245, 183, 0, 0.25))',
+              }}
+            />
+          </div>
+
+        </div>
 
         {/* Motto */}
         <div style={{
@@ -72,6 +116,7 @@ export default function Hero() {
           color: '#ffd700',
           letterSpacing: '0.15em',
           textTransform: 'uppercase',
+          marginTop: '7rem',
           marginBottom: '1rem',
           fontFamily: 'var(--font-heading)'
         }}>
@@ -190,6 +235,23 @@ export default function Hero() {
         </div>
 
       </div>
+
+      {/* ── Mobile-only tweaks (≤ 768px) ───────────────────
+           Desktop layout is untouched.
+           On mobile: push title image down and cut gap to motto. */}
+      <style>{`
+        @media (max-width: 768px) {
+          /* Move title image lower so it doesn't overlap the logo awkwardly */
+          .hero-title-img-wrap {
+            top: 72% !important;
+          }
+          /* Shrink the overlay block's bottom margin → closes gap to motto */
+          .hero-overlay-block {
+            margin-bottom: -0.6rem !important;
+          }
+        }
+      `}</style>
+
     </section>
   );
 }
