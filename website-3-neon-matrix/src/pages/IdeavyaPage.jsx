@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ArrowLeft, ExternalLink, Users, Trophy, Calendar, MapPin, Lightbulb, Target, Zap } from 'lucide-react';
 
 export default function IdeavyaPage({ onBack, formUrl }) {
+  // Always start from the very top when this page mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
   return (
     <div style={{ minHeight: '100vh', background: '#050b18', color: '#f8fafc', fontFamily: 'var(--font-body)' }}>
       

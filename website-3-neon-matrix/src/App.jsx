@@ -19,7 +19,7 @@ export default function App() {
       <>
         <CircuitBackground />
         <IdeavyaPage
-          onBack={() => setShowIdeavya(false)}
+          onBack={() => { setShowIdeavya(false); window.scrollTo({ top: 0, behavior: 'instant' }); }}
           formUrl={EVENT_FORM_LINKS['ideavya']}
         />
       </>

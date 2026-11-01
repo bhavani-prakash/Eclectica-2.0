@@ -147,7 +147,7 @@ export default function Hero() {
         {/* CTA: Button leads to Events */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '2.5rem' }}>
           <a href="#events" className="btn-gold" style={{ padding: '0.85rem 2.5rem', fontSize: '1.15rem' }}>
-            <span>Explore 9 Events & Register</span>
+            <span>Explore 8 Events &amp; Register</span>
             <ArrowRight size={18} />
           </a>
         </div>
