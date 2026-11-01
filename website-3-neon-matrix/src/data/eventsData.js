@@ -7,10 +7,10 @@ export const EVENT_FORM_LINKS = {
   "ideavya": "https://forms.gle/dtXUEeyFknHhxSQe7",
   "tech-quiz": "https://docs.google.com/forms/d/e/1FAIpQLSeFOkbr8Io4Cei_AIEPzZXq3ji3mlIrILjTvJ-0SSNigfcfoQ/viewform?usp=publish-editor",
   "layotrix": "https://docs.google.com/forms/d/e/1FAIpQLSdwzDJ_ghOrKp9--lIHzfts4OtbDiNkRQbIxArDjaavdwvSuA/viewform?usp=dialog",
-  "project-expo": "https://docs.google.com/forms/d/e/PASTE_YOUR_PROJECT_EXPO_GOOGLE_FORM_LINK_HERE/viewform",
+  "project-expo": "https://forms.gle/7NPPkAmEBFW9FmkW9",
   "nexcircuit": "https://docs.google.com/forms/d/e/1FAIpQLSfHr8ZZ2eg1qvFfHPMeVWbF3KF2AyHV_J5bwW7b4ZGpjFnNmQ/viewform?usp=publish-editor",
-  "bug-hunters": "https://docs.google.com/forms/d/e/PASTE_YOUR_BUG_HUNTERS_GOOGLE_FORM_LINK_HERE/viewform",
-  "poster-presentation": "https://docs.google.com/forms/d/e/PASTE_YOUR_POSTER_PRESENTATION_GOOGLE_FORM_LINK_HERE/viewform",
+  "bug-hunters": "https://docs.google.com/forms/d/e/1FAIpQLSfzVQGbB67zyFK_aBzm32dAqYPYhN9ntpSBNodGR5KGSuD1Nw/viewform?usp=header",
+  "poster-presentation": "https://docs.google.com/forms/d/e/1FAIpQLSfy2_VmJNytwn_vmszZXA8t78S_6hNdNl8iELQngKyQ8qLU0g/viewform?usp=header",
   "debate": "https://docs.google.com/forms/d/e/1FAIpQLScV5Pe7lyzIQfbV2YxiTBHZdqbI1eixDnQBxdS1pEnofUHsYQ/viewform?usp=header",
 };
 
@@ -23,8 +23,8 @@ export const FEST_INFO = {
   tagline: "Unleashing Engineering Brilliance in Electronics & Communication",
   date: "NOVEMBER 11 & 12, 2026",
   venue: "ECE Department Seminar Hall & Advanced Laboratories, MITS Campus",
-  contactEmail: "bhavaniprakash960@gmail.com",
-  contactPhone: "+91 79815 76818 / +91 8125035960",
+  contactEmail: "revanthreddy5126@gmail.com",
+  contactPhone: "+91 79815 76818 / +91 91132 65514  / +91 81252 46476  / +91 95024 43406",
 };
 
 export const EVENTS = [

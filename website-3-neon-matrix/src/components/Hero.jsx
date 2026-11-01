@@ -126,7 +126,7 @@ export default function Hero() {
             color: '#f8fafc'
           }}>
             <MapPin size={18} color="#f5b700" />
-            <span>MITS Campus, ECE Dept Labs</span>
+            <span>MITS Campus</span>
           </div>
 
           <div style={{
@@ -140,7 +140,7 @@ export default function Hero() {
             color: '#f8fafc'
           }}>
             <Trophy size={18} color="#00f0ff" />
-            <span>Cash Prizes + Merit Shields</span>
+            <span>Cash Prizes </span>
           </div>
         </div>
 
