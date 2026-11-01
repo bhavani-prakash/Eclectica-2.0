@@ -243,7 +243,7 @@ export default function Hero() {
         @media (max-width: 768px) {
           /* Move title image lower so it doesn't overlap the logo awkwardly */
           .hero-title-img-wrap {
-            top: 72% !important;
+            top: 90% !important;
           }
           /* Shrink the overlay block's bottom margin → closes gap to motto */
           .hero-overlay-block {
