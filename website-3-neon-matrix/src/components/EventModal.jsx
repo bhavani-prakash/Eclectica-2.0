@@ -1,8 +1,13 @@
 import React from 'react';
-import { X, CheckCircle2, Users, Clock, Award, ExternalLink, ShieldAlert, Cpu } from 'lucide-react';
+import { X, CheckCircle2, Users, Clock, Award, ExternalLink, ShieldAlert, Cpu, IndianRupee } from 'lucide-react';
 
 export default function EventModal({ event, onClose }) {
   if (!event) return null;
+
+  // Extract the registration fee rule (whichever rule contains ₹)
+  const feeRule = event.rules.find(r => r.includes('₹'));
+  // Remaining rules (everything except the fee rule)
+  const otherRules = event.rules.filter(r => !r.includes('₹'));
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -61,6 +66,40 @@ export default function EventModal({ event, onClose }) {
 
         {/* Modal Body */}
         <div style={{ padding: '1.75rem 2rem', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '1.75rem' }}>
+
+          {/* ── Registration Fee Highlight Banner ── */}
+          {feeRule && (
+            <div style={{
+              background: 'linear-gradient(135deg, rgba(245,183,0,0.15) 0%, rgba(255,215,0,0.08) 100%)',
+              border: '2px solid rgba(245, 183, 0, 0.6)',
+              borderRadius: '12px',
+              padding: '0.9rem 1.3rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.85rem',
+              boxShadow: '0 0 20px rgba(245, 183, 0, 0.15)',
+            }}>
+              {/* Rupee Icon circle */}
+              <div style={{
+                width: '40px', height: '40px', flexShrink: 0,
+                borderRadius: '50%',
+                background: 'linear-gradient(135deg, #ffd700, #f5b700)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                boxShadow: '0 0 12px rgba(245,183,0,0.5)',
+              }}>
+                <IndianRupee size={20} color="#050b18" strokeWidth={2.5} />
+              </div>
+              <div>
+                <div style={{ fontSize: '0.72rem', fontWeight: 800, color: '#ffd700', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.2rem' }}>
+                  Registration Fee
+                </div>
+                <div style={{ color: '#f8fafc', fontSize: '0.97rem', fontWeight: 600, lineHeight: 1.5 }}>
+                  {/* Strip "Registration Fee —" prefix if present */}
+                  {feeRule.replace(/^Registration Fee\s*[—\-:]\s*/i, '')}
+                </div>
+              </div>
+            </div>
+          )}
           
           {/* Dedicated Google Form Callout */}
           <div style={{
@@ -187,7 +226,7 @@ export default function EventModal({ event, onClose }) {
               <ShieldAlert size={18} /> Rules & Guidelines
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-              {event.rules.map((rule, idx) => (
+              {otherRules.map((rule, idx) => (
                 <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.65rem' }}>
                   <CheckCircle2 size={17} color="#00f0ff" style={{ marginTop: '0.2rem', flexShrink: 0 }} />
                   <span style={{ color: '#cbd5e1', fontSize: '0.93rem' }}>{rule}</span>

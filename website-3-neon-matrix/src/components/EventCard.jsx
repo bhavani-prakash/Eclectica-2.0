@@ -20,7 +20,7 @@ export default function EventCard({ event, onExplore, onIdeavya }) {
   return (
     <div className="cyber-card" style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', height: '100%' }}>
       
-      {/* Top Header: Icon & ECE Circuit Symbol */}
+      {/* Top Header: Icon left, Event Logo right */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.25rem' }}>
         <div style={{
           width: '52px',
@@ -40,21 +40,25 @@ export default function EventCard({ event, onExplore, onIdeavya }) {
           <IconComponent size={26} />
         </div>
 
-        {/* Special badge for IDEAVYA */}
-        {isIdeavya && (
-          <span style={{
-            fontSize: '0.68rem',
-            fontWeight: 800,
-            background: 'linear-gradient(135deg, rgba(255,215,0,0.18), rgba(245,183,0,0.1))',
-            color: '#ffd700',
-            border: '1px solid rgba(255,215,0,0.4)',
-            borderRadius: '8px',
-            padding: '0.3rem 0.65rem',
-            letterSpacing: '0.06em',
-            fontFamily: 'var(--font-heading)'
-          }}>
-            ₹12,500 PRIZES
-          </span>
+        {/* Right: Event logo image */}
+        {event.image && (
+          <img
+            src={event.image}
+            alt={event.title}
+            style={{
+              width: '64px',
+              height: '64px',
+              objectFit: 'cover',
+              borderRadius: '12px',
+              border: isIdeavya
+                ? '1px solid rgba(255,215,0,0.35)'
+                : '1px solid rgba(0,240,255,0.25)',
+              boxShadow: isIdeavya
+                ? '0 0 14px rgba(255,215,0,0.18)'
+                : '0 0 14px rgba(0,0,0,0.5)',
+              flexShrink: 0,
+            }}
+          />
         )}
       </div>
 

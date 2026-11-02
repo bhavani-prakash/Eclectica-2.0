@@ -30,6 +30,7 @@ export const FEST_INFO = {
 export const EVENTS = [
   {
     id: "ideavya",
+    image: "/event-ideavya.png",
     title: "IDEAVYA 2026",
     subtitle: "Your Idea · Your Innovation",
     category: "Innovation",
@@ -92,288 +93,294 @@ export const EVENTS = [
   },
   {
     id: "tech-quiz",
+    image: "/event-tech-quiz.jpg",
     title: "TECH QUIZ",
     subtitle: "Battle of Circuits, Signals & Logic",
     category: "Technical",
     badge: "Core Technical",
     eceSymbol: "⎍ [CLK/LOGIC]",
     schematicType: "Oscillator & Logic",
-    tagline: "Test your electronics acumen across written, oral, and high-voltage buzzer rounds!",
-    teamSize: "2 - 3 Members",
+    tagline: "Answer MCQs, apply your technical knowledge, and race the clock in rapid fire — test your ECE brilliance!",
+    teamSize: "1 - 3 Members",
     roundsCount: 3,
     icon: "HelpCircle",
     formUrl: EVENT_FORM_LINKS["tech-quiz"],
-    overview: "Tech Quiz tests your comprehensive fundamentals in Analog & Digital Electronics, Signals, Microprocessors, Communication Systems, and latest engineering trends through 3 escalating rounds.",
+    overview: "Join us for ECE Fest 2026 — ECLECTICA-2K26-II! Tech Quiz is a 3-round technical challenge that tests your MCQ knowledge, problem-solving ability, and rapid-fire recall. Interdisciplinary participation is mandatory. Open to MITS and external college students.",
     rounds: [
       {
-        roundNumber: "1st Round",
-        title: "Written Quiz",
-        description: "A fast-paced pen-and-paper elimination round with 30 MCQs covering circuit theory, digital logic, semiconductor physics, and electronic components.",
-        duration: "30 Minutes",
-        scoring: "+1 for correct, negative marking for select advanced sections"
+        roundNumber: "Round 1",
+        title: "Tech MCQ's",
+        description: "Answer multiple-choice technical questions covering ECE fundamentals, circuits, components, and logical reasoning concepts.",
+        duration: "Timed",
+        scoring: "Score-based elimination; top teams advance"
       },
       {
-        roundNumber: "2nd Round",
-        title: "Oral Quiz",
-        description: "Qualified teams will face domain-specific conceptual questions in front of the judging panel. Tests quick recall and deep technical comprehension.",
-        duration: "20 Minutes",
-        scoring: "Direct point award, passed questions to next team with half score"
+        roundNumber: "Round 2",
+        title: "Think and Apply",
+        description: "Understand the given problem and apply your technical knowledge to solve it. Tests analytical thinking and practical ECE application.",
+        duration: "Timed",
+        scoring: "Accuracy and problem-solving depth"
       },
       {
-        roundNumber: "3rd Round",
-        title: "Buzzer Quiz (Grand Finale)",
-        description: "The ultimate showdown! For the final teams, an intense buzzer round is conducted. Teams that buzz in first and answer correctly for maximum questions are declared the winners.",
-        duration: "25 Minutes",
-        scoring: "Fastest buzzers win the points; penalty for incorrect answers"
+        roundNumber: "Round 3",
+        title: "Rapid Fire",
+        description: "Answer questions quickly and correctly within the given time. Fast recall and precision win the round!",
+        duration: "Timed",
+        scoring: "Speed + accuracy; highest correct answers wins"
       }
     ],
     rules: [
-      "Each team must consist of 2 to 3 registered student members.",
-      "Mobile phones, smart watches, and electronic gadgets are strictly prohibited.",
-      "In Round 3 (Buzzer round), pressing the buzzer without being recognized will void the turn.",
-      "Ties in the final round will be resolved with a sudden-death tiebreaker question.",
+      "Team size: 1 to 3 members. Interdisciplinary participation is mandatory.",
+      "Open to students from MITS and other recognized colleges and educational institutions.",
+      "Registration Fee — Internal: ₹50 per head | External: ₹100 per team.",
+      "Mobile phones, smart watches, and electronic gadgets are strictly prohibited during the quiz.",
       "The decision of the Quiz Masters and faculty coordinators is final and binding."
     ],
-    perks: ["1st & 2nd Cash Prizes", "Merit Certificates", "Participation Certificates for all"]
+    perks: ["Exciting Cash Prizes", "Merit Certificates", "Participation Certificates for all"]
   },
   {
     id: "layotrix",
+    image: "/event-layotrix.png",
     title: "LAYOTRIX",
-    subtitle: "Schematic to PCB Layout Challenge",
+    subtitle: "PCB Design Challenge — Think it. Design it. Bring the circuit to life!",
     category: "Hardware",
     badge: "Circuit CAD",
     eceSymbol: "⏚ [PCB TRACE]",
     schematicType: "PCB Layout & Altium",
-    tagline: "Identify required components from circuit names and route professional PCBs in Altium or KiCad!",
+    tagline: "Identify circuit components and design a full PCB layout using Altium Designer or KiCad!",
     teamSize: "1 - 2 Members",
     roundsCount: 2,
     icon: "Cpu",
     formUrl: EVENT_FORM_LINKS["layotrix"],
-    overview: "LAYOTRIX is the flagship PCB CAD design contest evaluating circuit design intuition, bill-of-materials analysis, and rapid board layout using industry-standard tools.",
+    overview: "LAYOTRIX 2026 challenges participants to step into the world of circuits and PCB design! Identify the components behind a circuit and turn a given circuit into a PCB design using industry-standard design tools. Held on Nov 11 & 12 at MITS Campus, Madanapalle.",
     rounds: [
       {
-        roundNumber: "1st Round",
-        title: "Component Requisition Challenge",
-        description: "Participants will be provided with a circuit name/spec. They must accurately determine and list all electrical components, IC packages, values, and ratings needed to construct that circuit.",
-        duration: "25 Minutes",
-        scoring: "Points based on completeness, accuracy of component specifications, and tolerances"
+        roundNumber: "Round 1",
+        title: "Circuit Component Challenge",
+        description: "Each team will be given a circuit name. Identify and list all the components required to build it — test your component knowledge and circuit intuition.",
+        duration: "Timed",
+        scoring: "Completeness and accuracy of component list"
       },
       {
-        roundNumber: "2nd Round",
-        title: "PCB CAD Layout & Routing",
-        description: "Qualifying participants receive a complete circuit schematic. They must capture the schematic and build the PCB layout in CAD software like Altium Designer or KiCad.",
-        duration: "60 Minutes",
-        scoring: "Evaluated on Design Rule Check (DRC) zero-errors, trace width, ground plane layout, and neatness"
+        roundNumber: "Round 2",
+        title: "PCB Design Challenge",
+        description: "Each team will be given a circuit to design using a PCB design tool such as Altium Designer or KiCad. Route traces, place components, and produce a clean board layout.",
+        duration: "Timed",
+        scoring: "DRC errors, trace routing quality, layout neatness"
       }
     ],
     rules: [
-      "Open to individual participants or teams of up to 2 members.",
-      "CAD software provided: KiCad / Altium Designer on campus lab workstations (personal laptops also allowed with pre-installed CAD).",
-      "Auto-routers are strictly prohibited; routing must be performed manually.",
-      "Zero DRC errors and efficient copper area utilization receive highest weightage.",
-      "Gerber files or native design project files must be submitted before the clock runs out."
+      "Team size: 1 or 2 members per team.",
+      "Registration Fee — Internals: ₹50 per head | Externals: ₹100 per head.",
+      "Open to students from MITS and other recognized colleges and educational institutions.",
+      "Auto-routers are strictly prohibited; all routing must be performed manually.",
+      "Gerber files or native project files must be submitted before the time runs out.",
+      "Personal laptops with pre-installed Altium Designer or KiCad are allowed."
     ],
-    perks: ["Cash Prizes for Top 2 Teams", "Design Excellence Certificates", "Industrial Tool Endorsement"]
+    perks: ["Cash Prizes for Top Teams", "Design Excellence Certificates", "Industrial Tool Endorsement"]
   },
   {
     id: "project-expo",
+    image: "/event-project-expo.jpg",
     title: "PROJECT EXPO",
     subtitle: "Innovation & Prototype Showcase",
     category: "Innovation",
     badge: "Hardware & IoT",
     eceSymbol: "📡 [TX/RX / IoT]",
     schematicType: "Embedded Prototype",
-    tagline: "Showcase your working engineering projects, hardware models, and IoT innovations to expert judges!",
-    teamSize: "2 - 4 Members",
+    tagline: "Showcase your project, demonstrate its working, and impress judges in a live on-spot exhibition!",
+    teamSize: "1 - 3 Members",
     roundsCount: 1,
     icon: "Sparkles",
     formUrl: EVENT_FORM_LINKS["project-expo"],
-    overview: "The premier platform for undergraduate engineers to display their working innovations across Embedded Systems, IoT, Robotics, VLSI, AI on Edge, Wireless Comm, and Green Energy.",
+    overview: "PROJECT EXPO 2026 is a live on-spot project exhibition where all registered teams directly present and demonstrate their projects to judges and audience. Winners are selected based on innovation, creativity, practical application, presentation, and overall project impact. Interdisciplinary teams encouraged.",
     rounds: [
       {
-        roundNumber: "Main Round",
-        title: "Live Demonstration & Viva",
-        description: "Teams showcase their working prototypes to visitors and the expert academic/industry jury panel followed by an in-depth Q&A.",
-        duration: "All-Day Display + 10 Min Jury Evaluation",
-        scoring: "Innovation (30%), Technical Complexity (30%), Practical Viability (20%), Presentation (20%)"
+        roundNumber: "Single Round",
+        title: "Project Expo — On-Spot Exhibition",
+        description: "All registered teams directly participate in the expo. Each team presents and demonstrates their project to judges and audience, explains its uniqueness, demonstrates working (if applicable), and answers judge questions.",
+        duration: "All-Day Exhibition",
+        scoring: "Innovation, Creativity, Practical Application, Presentation & Overall Impact"
       }
     ],
     rules: [
-      "Team size: 2 to 4 members per project.",
-      "A working prototype or physical hardware setup is mandatory.",
-      "Teams must bring their own laptops, microcontrollers, and specialized equipment; standard 230V AC power outlets will be provided.",
-      "A technical poster/banner (A1 or flex) explaining the architecture and problem statement is highly recommended.",
-      "Plagiarized or pre-fabricated commercial kits without custom engineering will be disqualified."
+      "Team size: 1 to 3 members. Interdisciplinary participation encouraged (students from at least two departments).",
+      "Registration Fee — Internal: ₹150 per team | External: ₹300 per team.",
+      "Open to students from MITS and other recognized colleges and educational institutions.",
+      "Each team should include students from at least two different academic departments or disciplines.",
+      "All teams must present and demonstrate their project; judges will ask questions.",
+      "Plagiarized or commercially pre-fabricated kits without custom engineering will be disqualified."
     ],
     perks: ["Grand Cash Awards", "Best Innovation Trophy", "Incubation & Mentorship Support"]
   },
   {
     id: "nexcircuit",
+    image: "/event-nexcircuit.jpg",
     title: "NEXCIRCUIT",
-    subtitle: "The 4-Stage Circuit Master Championship",
+    subtitle: "Electronics Knowledge & Circuit Debugging Championship",
     category: "Circuits",
     badge: "Hands-on Lab",
     eceSymbol: "⚡ [R-L-C & OHM]",
     schematicType: "Breadboard & Multimeter",
-    tagline: "From visual component recognition & Ohm's law mastery to hands-on breadboard assembly!",
-    teamSize: "2 Members",
-    roundsCount: 4,
+    tagline: "Test ECE fundamentals, identify components, and debug circuits in 3 exciting technical rounds!",
+    teamSize: "Individual",
+    roundsCount: 3,
     icon: "Zap",
     formUrl: EVENT_FORM_LINKS["nexcircuit"],
-    overview: "A thrilling four-round elimination marathon designed to find the sharpest hands-on electronics technicians who can think fast and wire accurately under pressure.",
+    overview: "NEXCIRCUITS is an exciting technical event designed to test students' fundamental electronics knowledge, component identification skills, and practical circuit troubleshooting abilities. Get ready to explore electronics, identify components, solve circuit challenges, and demonstrate your technical skills!",
     rounds: [
       {
-        roundNumber: "1st Round",
-        title: "Visual Component Identification",
-        description: "Identify physical electronic components, ICs, sensors, passives, and active elements shown via high-resolution photos and real specimens.",
-        duration: "15 Minutes",
-        scoring: "Speed & accuracy identification matrix"
+        roundNumber: "Round 1",
+        title: "Technical Quiz",
+        description: "Test your basic knowledge and technical concepts. Answer questions based on electronic circuits, components, fundamental ECE concepts, and basic logical reasoning.",
+        duration: "Timed",
+        scoring: "Score-based elimination; top participants advance"
       },
       {
-        roundNumber: "2nd Round",
-        title: "Symbol Matching",
-        description: "Match identified components with their IEEE/IEC standard schematic circuit symbols within the time limit.",
-        duration: "15 Minutes",
-        scoring: "Timed matching puzzle test"
+        roundNumber: "Round 2",
+        title: "Component Identification",
+        description: "Identify various electronic components. Understand their symbols, functions, and applications. Test your practical knowledge of electronic components.",
+        duration: "Timed",
+        scoring: "Speed & accuracy of identification"
       },
       {
-        roundNumber: "3rd Round",
-        title: "Voltage, Current & Ohm's Law",
-        description: "Solve rapid numerical problems and theoretical questions regarding Voltage, Current, Resistance, Ohm's Law, KVL, KCL, and equivalent circuits.",
-        duration: "20 Minutes",
-        scoring: "Exact numerical accuracy and unit conversions"
-      },
-      {
-        roundNumber: "4th Round",
-        title: "Breadboard Circuit Assembly",
-        description: "Finalists receive a target circuit diagram and a component kit. They must construct the circuit on a breadboard and demonstrate expected output on an oscilloscope/multimeter.",
-        duration: "35 Minutes",
-        scoring: "Fastest correct functional output with clean wire routing"
+        roundNumber: "Round 3",
+        title: "Circuit Debugging",
+        description: "Identify and fix faults in given circuits. Apply your practical electronics knowledge to troubleshoot and restore correct circuit operation.",
+        duration: "Timed",
+        scoring: "Accuracy of fault identification and correction"
       }
     ],
     rules: [
-      "Teams must consist of exactly 2 members.",
-      "Breadboards, wires, and electronic kits will be provided at the lab desk.",
-      "Components damaged due to reverse polarity or exceeding ratings will incur penalty deductions.",
-      "Multimeter verification will be checked live by the laboratory faculty in charge.",
-      "Ties resolved based on completion time in Round 4."
+      "Individual participation only.",
+      "Open to students from MITS and other recognized colleges; Cash prizes for winners.",
+      "Event Dates: 11 & 12 November 2026, Venue: MITS Campus, Madanapalle.",
+      "No electronic aids or mobile phones permitted during rounds.",
+      "Judge's decision on circuit evaluation is final."
     ],
-    perks: ["Circuit Wizard Winner Shield", "Cash Prize & Merit Certificate", "Kit Giveaways"]
+    perks: ["Win Exciting Cash Prizes", "Circuit Champion Certificate", "Merit Recognition"]
   },
   {
     id: "bug-hunters",
+    image: "/event-bug-hunters.jpg",
     title: "BUG HUNTERS",
-    subtitle: "Multi-Language Code & Debug Hunt",
+    subtitle: "Code • Debug • Conquer",
     category: "Coding",
     badge: "Software & Logic",
     eceSymbol: "0xFE [DEBUG]",
     schematicType: "Firmware & Compiler",
-    tagline: "MCQs, rapid-fire oral technical questions, and live code debugging across C, C++, Java, Python & SQL!",
-    teamSize: "1 - 2 Members",
+    tagline: "Crack C programming MCQs, debug faulty code, and solve the mystery challenge in 3 fierce rounds!",
+    teamSize: "Individual",
     roundsCount: 3,
     icon: "ShieldCheck",
     formUrl: EVENT_FORM_LINKS["bug-hunters"],
-    overview: "Do you have an eagle eye for runtime errors, memory leaks, and syntax pitfalls? Put your programming mettle to the test across 5 major software languages.",
+    overview: "BUG HUNTERS is an exciting technical event designed to challenge your C programming knowledge, logical thinking, debugging skills, and problem-solving abilities. Get ready to explore the world of coding, identify tricky programs, and prove your programming skills. Event Date: 12 November 2026, 10:00 AM onwards at MITS Campus.",
     rounds: [
       {
-        roundNumber: "1st Round",
-        title: "Coding MCQs",
-        description: "Written / computer-based test covering code output prediction, pointer arithmetic, memory allocation, and algorithmic time complexity.",
-        duration: "30 Minutes",
-        scoring: "Score-based ranking; top 50% advance"
+        roundNumber: "Round 1",
+        title: "Code Quiz",
+        description: "A 15-question multiple-choice quiz based on C programming, progressing from easy to difficult. Test your knowledge of programming fundamentals, operators, loops, code outputs, and tricky concepts.",
+        duration: "Timed",
+        scoring: "Score-based elimination; top participants advance"
       },
       {
-        roundNumber: "2nd Round",
-        title: "Polyglot Oral Round",
-        description: "Rapid-fire viva questions fired by judges spanning C, C++, Java, Python, and SQL queries. Fast technical answering is crucial.",
-        duration: "20 Minutes",
-        scoring: "Points awarded per prompt; passes allowed with penalty"
+        roundNumber: "Round 2",
+        title: "Debug the Code",
+        description: "Identify errors, correct faulty C programs, and produce the expected output. Test your debugging skills, accuracy, and logical reasoning on intentionally buggy code snippets.",
+        duration: "Timed",
+        scoring: "Number of correctly debugged programs within time"
       },
       {
-        roundNumber: "3rd Round",
-        title: "Live Code Debugging",
-        description: "Participants are given intentionally corrupted code snippets with compile, logic, and runtime errors. You must fix the bugs and ensure all test cases pass.",
-        duration: "40 Minutes",
-        scoring: "Ranked by number of successfully executed test cases and time of submission"
+        roundNumber: "Round 3",
+        title: "Mystery Challenge",
+        description: "Enter the final challenge with interesting and tricky programming problems. Apply your coding knowledge, logical thinking, and problem-solving skills to crack the mystery.",
+        duration: "Timed",
+        scoring: "Accuracy and speed of solutions"
       }
     ],
     rules: [
-      "Teams of 1 or 2 members.",
-      "Programming stacks tested: C, C++, Java, Python, and SQL.",
-      "Strict prohibition of internet browsing, ChatGPT, Copilot, or external assistance during Round 3.",
-      "Standard IDEs (VS Code, CodeBlocks, PyCharm, Eclipse) will be provided on lab systems.",
+      "Individual participation only.",
+      "Registration Fee: ₹50 per participant.",
+      "Event focuses on C programming language across all rounds.",
+      "No internet access, AI tools, or external aids permitted during rounds.",
+      "Venue: MITS Deemed to be University Campus, Madanapalle — Organised by Dept of ECE.",
       "Any malpractice will lead to immediate disqualification."
     ],
-    perks: ["Master Debugger Trophy", "Cash Awards", "Department Merit Certificate"]
+    perks: ["Cash Prizes for Winners", "Master Debugger Certificate", "Department Merit Recognition"]
   },
   {
     id: "poster-presentation",
+    image: "/event-poster-presentation.jpg",
     title: "POSTER PRESENTATION",
-    subtitle: "Research, Concept & Real-World Solutions",
+    subtitle: "Come. Present. Innovate. Inspire.",
     category: "Research",
     badge: "Ideation",
     eceSymbol: "⚛ [RESEARCH/VLSI]",
     schematicType: "Scholarly Symposium",
-    tagline: "Showcase your research papers, innovative concepts, and creative solutions to real-world problems!",
-    teamSize: "1 - 3 Members",
+    tagline: "Present one original poster on Electronics, Communication, Technology or Science and defend it before a jury!",
+    teamSize: "1 - 2 Members",
     roundsCount: 1,
     icon: "FileText",
     formUrl: EVENT_FORM_LINKS["poster-presentation"],
-    overview: "Showcase your ideas, research, and creativity through an engaging technical poster. Present your research papers, innovative concepts, technical projects, or engineered solutions to pressing real-world challenges.",
+    overview: "POSTER PRESENTATION 2026 invites teams to present one original poster related to Electronics, Communication, Technology, Science, Innovation, or an interdisciplinary topic. Content must clearly explain the problem, proposed solution/idea, methodology, applications, and outcomes. Event Dates: 11 & 12 November 2026, MITS Campus.",
     rounds: [
       {
-        roundNumber: "Presentation & Defense",
-        title: "Poster Exhibition & Jury Q&A",
-        description: "Teams mount their posters on assigned display boards. Each team receives 5 minutes to deliver an executive pitch to the jury panel followed by 3 minutes of technical defense.",
-        duration: "5 Mins Pitch + 3 Mins Q&A",
-        scoring: "Originality of concept (25%), Technical depth (25%), Poster visual aesthetics & clarity (25%), Oral defense (25%)"
+        roundNumber: "Single Round",
+        title: "Poster Exhibition & Jury Evaluation",
+        description: "Teams present their original poster to the jury panel. Each team can present only one poster. The content should explain the problem, proposed solution, methodology, applications, and outcomes clearly.",
+        duration: "Allotted time per team",
+        scoring: "Content clarity, originality, methodology, visual design & jury Q&A"
       }
     ],
     rules: [
-      "Open to solo presenters or teams of up to 3 members.",
-      "Recommended poster dimensions: Standard A1 or A2 sheet (landscape or portrait).",
-      "Poster must contain: Title, Authors, Abstract, Methodology / Circuit Diagram, Results / Graphs, and Conclusion.",
-      "All text should be legible from a distance of 1.5 meters.",
-      "Plagiarized papers without proper citations will not be evaluated."
+      "Team size: 1 to 2 members per team.",
+      "Registration Fee — Internals: ₹50 per head | Externals: ₹100 per head.",
+      "Each team can present one original poster only; multiple submissions are not allowed.",
+      "Poster topic must be related to Electronics, Communication, Technology, Science, Innovation, or an interdisciplinary subject.",
+      "The poster must be original work; plagiarized or copied content may lead to disqualification.",
+      "Participants must bring/present their poster according to the specified format and guidelines.",
+      "Participants must carry their college ID card. Participants retain ownership of their original ideas."
     ],
-    perks: ["Best Research Paper Award", "Cash Prizes for Top 2 Presentations", "Conference Publication Recommendation"]
+    perks: ["Best Research Paper Award", "Cash Prizes for Top Presentations", "Certificate for all participants"]
   },
   {
     id: "debate",
+    image: "/event-debate.jpg",
     title: "DEBATE",
     subtitle: "Battle of Eloquence & Technical Rhetoric",
     category: "Literary",
     badge: "Oratory",
-    tagline: "Prepared opening arguments followed by high-pressure extempore clashes of intellect!",
+    tagline: "Argue, rebut, and persuade — a dynamic debate on technology and society open to all students!",
     eceSymbol: "🎙 [SIGNAL RHETORIC]",
     schematicType: "Contemporary Clash",
-    teamSize: "2 Members",
+    teamSize: "1 - 3 Members",
     roundsCount: 2,
     icon: "Users",
     formUrl: EVENT_FORM_LINKS["debate"],
-    overview: "Debate evaluates critical thinking, argumentative agility, and persuasive speaking on contentious themes surrounding emerging technology, AI ethics, automation, and societal impacts.",
+    overview: "DEBATE COMPETITION tests your critical thinking, argumentative agility, and persuasive speaking on contentious themes surrounding emerging technology, AI ethics, automation, and societal impacts. Open to MITS and external college students. Event Dates: 10 & 11 November 2026, MITS Campus.",
     rounds: [
       {
-        roundNumber: "1st Round",
+        roundNumber: "Round 1",
         title: "Prepared Debate",
-        description: "The topic is announced in advance on the symposium portal. Teams prepare researched arguments and deliver structured affirmative or negative opening speeches.",
-        duration: "4 Minutes per speaker + 2 Min Rebuttal",
+        description: "Teams prepare researched arguments and deliver structured affirmative or negative opening speeches on a topic announced in advance.",
+        duration: "Timed per speaker + Rebuttal",
         scoring: "Argument structure, factual backing, presentation fluency"
       },
       {
-        roundNumber: "2nd Round",
+        roundNumber: "Round 2",
         title: "Extempore Debate (Finale)",
-        description: "The topic is announced on the spot. Finalist teams receive 10-15 minutes of preparation time to discuss, organize their thoughts, and prepare their counter-arguments before the debate begins.",
-        duration: "10-15 Min Prep + 5 Min Debate per pair",
+        description: "The topic is announced on the spot. Teams receive preparation time to organize their thoughts before the final debate begins.",
+        duration: "Prep Time + Debate per pair",
         scoring: "Spontaneous rhetoric, counter-argument sharpness, poise and logic"
       }
     ],
     rules: [
-      "Each team consists of 2 members (affirmative & negative representation).",
-      "In Round 2, strictly 10 to 15 minutes preparation time is provided after topic announcement.",
+      "Team size: 1 to 3 participants per team.",
+      "Registration Fee — MITS Students: ₹50 per head | Students from Other Colleges: ₹100 per head.",
+      "Open to students from MITS and other recognized colleges and educational institutions.",
       "No personal attacks, abusive language, or unparliamentary speech allowed.",
       "Adherence to the time bell is strictly monitored; marks deducted for exceeding time.",
-      "Jury verdict on argumentative eloquence and logic is decisive."
+      "Jury verdict on argumentative eloquence and logic is decisive and final."
     ],
     perks: ["Best Orator Rolling Trophy", "Cash Prizes for Winning & Runner-up Teams", "Certificate of Honor"]
   }
