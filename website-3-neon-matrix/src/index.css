@@ -310,3 +310,53 @@ h1, h2, h3, h4, .font-heading {
 .section-header-anim {
   animation: sectionFadeUp 0.7s ease 0.2s both;
 }
+
+/* ── Team Section Grid ──────────────────────────────────────── */
+
+/* Default: 4 columns on desktop */
+.team-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  justify-items: stretch;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 900px) {
+  .team-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Mobile: strictly 2 columns, smaller cards */
+@media (max-width: 600px) {
+  .team-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  /* Shrink member cards on mobile */
+  .team-member-card {
+    padding: 1.1rem 0.75rem !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .team-member-avatar {
+    width: 64px !important;
+    height: 64px !important;
+    min-width: 64px !important;
+    min-height: 64px !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .team-member-name {
+    font-size: 0.78rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .team-member-role {
+    font-size: 0.66rem !important;
+  }
+}

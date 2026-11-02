@@ -139,7 +139,7 @@ function HODCard({ member }) {
 function MemberCard({ member, accentColor = '#00f0ff', delay = 0 }) {
   return (
     <div
-      className="card-entrance visible-left"
+      className="team-member-card card-entrance visible-left"
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -164,38 +164,46 @@ function MemberCard({ member, accentColor = '#00f0ff', delay = 0 }) {
       }}
     >
       {/* Photo */}
-      <div style={{
-        width: 96,
-        height: 96,
-        borderRadius: '50%',
-        overflow: 'hidden',
-        border: `2px solid ${accentColor}55`,
-        boxShadow: `0 0 14px ${accentColor}22`,
-        marginBottom: '1rem',
-        flexShrink: 0,
-      }}>
+      <div
+        className="team-member-avatar"
+        style={{
+          width: 96,
+          height: 96,
+          borderRadius: '50%',
+          overflow: 'hidden',
+          border: `2px solid ${accentColor}55`,
+          boxShadow: `0 0 14px ${accentColor}22`,
+          marginBottom: '1rem',
+          flexShrink: 0,
+        }}
+      >
         {member.image
           ? <img src={member.image} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           : <AvatarPlaceholder size={96} color={accentColor} />
         }
       </div>
-
-      <div className="font-heading" style={{
-        fontSize: '0.95rem',
-        fontWeight: 700,
-        color: '#f8fafc',
-        marginBottom: '0.3rem',
-        lineHeight: 1.3,
-      }}>
+      <div
+        className="font-heading team-member-name"
+        style={{
+          fontSize: '0.95rem',
+          fontWeight: 700,
+          color: '#f8fafc',
+          marginBottom: '0.3rem',
+          lineHeight: 1.3,
+        }}
+      >
         {member.name}
       </div>
-      <div style={{
-        fontSize: '0.75rem',
-        color: accentColor,
-        fontWeight: 600,
-        letterSpacing: '0.05em',
-        opacity: 0.85,
-      }}>
+      <div
+        className="team-member-role"
+        style={{
+          fontSize: '0.75rem',
+          color: accentColor,
+          fontWeight: 600,
+          letterSpacing: '0.05em',
+          opacity: 0.85,
+        }}
+      >
         {member.role}
       </div>
     </div>
@@ -263,13 +271,7 @@ export default function TeamSection() {
         </div>
 
         {/* ── Faculty Coordinators */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 220px))',
-          gap: '1.5rem',
-          justifyContent: 'center',
-          marginBottom: '3.5rem',
-        }}>
+        <div className="team-grid-4" style={{ marginBottom: '3.5rem' }}>
           {FACULTY_COORDINATORS.map((m, i) => (
             <MemberCard key={i} member={m} accentColor="#00f0ff" delay={i * 0.1} />
           ))}
@@ -294,12 +296,7 @@ export default function TeamSection() {
         </div>
 
         {/* ── Student Coordinators */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 200px))',
-          gap: '1.25rem',
-          justifyContent: 'center',
-        }}>
+        <div className="team-grid-4">
           {STUDENT_COORDINATORS.map((m, i) => (
             <MemberCard key={i} member={m} accentColor="#f5b700" delay={i * 0.08} />
           ))}
