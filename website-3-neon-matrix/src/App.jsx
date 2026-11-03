@@ -125,12 +125,12 @@ export default function App() {
         <TeamSection />
 
         <Footer />
-
-        <EventModal
-          event={selectedEvent}
-          onClose={() => setSelectedEvent(null)}
-        />
       </div>
+
+      <EventModal
+        event={selectedEvent}
+        onClose={() => setSelectedEvent(null)}
+      />
     </>
   );
 }

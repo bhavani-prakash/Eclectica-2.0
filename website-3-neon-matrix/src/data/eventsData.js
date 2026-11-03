@@ -101,11 +101,11 @@ export const EVENTS = [
     eceSymbol: "⎍ [CLK/LOGIC]",
     schematicType: "Oscillator & Logic",
     tagline: "Answer MCQs, apply your technical knowledge, and race the clock in rapid fire — test your ECE brilliance!",
-    teamSize: "1 - 3 Members",
+    teamSize: "Individual",
     roundsCount: 3,
     icon: "HelpCircle",
     formUrl: EVENT_FORM_LINKS["tech-quiz"],
-    overview: "Join us for ECE Fest 2026 — ECLECTICA-2K26-II! Tech Quiz is a 3-round technical challenge that tests your MCQ knowledge, problem-solving ability, and rapid-fire recall. Interdisciplinary participation is mandatory. Open to MITS and external college students.",
+    overview: "Join us for ECE Fest 2026 — ECLECTICA-2K26-II! Tech Quiz is a 3-round technical challenge that tests your MCQ knowledge, problem-solving ability, and rapid-fire recall. Open to MITS and external college students.",
     rounds: [
       {
         roundNumber: "Round 1",
@@ -130,9 +130,9 @@ export const EVENTS = [
       }
     ],
     rules: [
-      "Team size: 1 to 3 members. Interdisciplinary participation is mandatory.",
+      "Individual participation only.",
       "Open to students from MITS and other recognized colleges and educational institutions.",
-      "Registration Fee — Internal: ₹50 per head | External: ₹100 per team.",
+      "Registration Fee — Internal: ₹50 per head | External: ₹100 per participant.",
       "Mobile phones, smart watches, and electronic gadgets are strictly prohibited during the quiz.",
       "The decision of the Quiz Masters and faculty coordinators is final and binding."
     ],

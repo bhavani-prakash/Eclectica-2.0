@@ -215,6 +215,36 @@ export default function IdeavyaPage({ onBack, formUrl }) {
               <h2 className="font-heading" style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffd700', marginBottom: '1rem', letterSpacing: '0.06em' }}>
                 👥 COORDINATORS
               </h2>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1.25rem',
+                marginBottom: '1.5rem',
+                padding: '1rem',
+                background: 'linear-gradient(135deg, rgba(255,215,0,0.12), rgba(0,240,255,0.06))',
+                border: '1px solid rgba(255,215,0,0.35)',
+                borderRadius: '14px',
+              }}>
+                <img
+                  src="/ideavya-main-coordinator.png"
+                  alt="Yatheendra Nath Reddy Devasani"
+                  style={{
+                    width: '96px',
+                    height: '96px',
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    objectPosition: 'center 25%',
+                    border: '2px solid #ffd700',
+                    boxShadow: '0 0 20px rgba(255,215,0,0.25)',
+                    flexShrink: 0,
+                  }}
+                />
+                <div>
+                  <div style={{ fontSize: '0.72rem', color: '#ffd700', fontWeight: 800, letterSpacing: '0.12em', marginBottom: '0.35rem' }}>MAIN COORDINATOR</div>
+                  <div style={{ color: '#f8fafc', fontWeight: 800, fontSize: '1.05rem', lineHeight: 1.35 }}>Yatheendra Nath Reddy Devasani</div>
+                  <div style={{ color: '#94a3b8', fontSize: '0.86rem', marginTop: '0.3rem' }}>Founder &amp; CEO - PathVision Innovations Pvt Ltd</div>
+                </div>
+              </div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div>
                   <div style={{ fontSize: '0.75rem', color: '#94a3b8', fontWeight: 600, marginBottom: '0.35rem' }}>FACULTY COORDINATORS</div>
