@@ -19,7 +19,7 @@ export default function App() {
 
   // IntersectionObserver: slide cards in from left/right when they enter viewport
   useEffect(() => {
-    if (!introComplete) return;
+    if (!introComplete || showIdeavya) return;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -36,7 +36,7 @@ export default function App() {
     );
     cardRefs.current.forEach((el) => { if (el) observer.observe(el); });
     return () => observer.disconnect();
-  }, [introComplete]);
+  }, [introComplete, showIdeavya]);
 
   // IDEAVYA dedicated page
   if (showIdeavya) {
