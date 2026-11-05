@@ -15,7 +15,7 @@ const HOD = {
 const FACULTY_COORDINATORS = [
   { name: 'Dr. V. Jayaprakasan',   role: 'Faculty Coordinator', image: '/faculty-jayaprakasan.png' },
   { name: 'Dr. SK Nurul Islam',    role: 'Faculty Coordinator', image: '/faculty-nurul-islam.png' },
-  { name: 'Dr. Simadri Batatya',   role: 'Faculty Coordinator', image: '/faculty-simadri.png' },
+  { name: 'Dr. Simadri Badatya',   role: 'Faculty Coordinator', image: '/faculty-simadri.png' },
   { name: 'Mr. G. Charan Kumar',   role: 'Faculty Coordinator', image: '/faculty-charan-kumar.png' },
 ];
 
